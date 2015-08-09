@@ -18,6 +18,13 @@ function routes() {
     }
   );
 
+  router.get("/photos",
+    ensureLoggedIn("/welcome"),
+    function(req, res) {
+      res.render("photos");
+    }
+  );
+
   router.get("/welcome", function(req, res) {
     res.render("welcome", {
       redirect_url: "/oauth_callback",

@@ -7,7 +7,7 @@ function init(passport) {
 
   router.get("/dropbox/callback",
     passport.authenticate("dropbox", {
-      successRedirect: "/done",
+      successRedirect: "/photos",
       failureRedirect: "/welcome"
     })
   );
